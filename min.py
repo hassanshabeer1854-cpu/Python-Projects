@@ -40,7 +40,7 @@ def deposit():
         else:
             global balance
             balance+=d
-            l.append(f"dpost={d}")
+            l.append(f"depost={d}")
             f=open("transcation.txt","a")
             f.write(f"\ndeposit amount={d}")
             f.close()
@@ -65,7 +65,7 @@ def withdraw():
             print("invalid amount try again")
         else:
             balance-=w
-            l.append(f"idthra:{w}")
+            l.append(f"widthra:{w}")
             f=open("transcation.txt","a")
             f.write(f"\nwithdraw amount={w}")
             f.close()
@@ -80,6 +80,7 @@ def chk_history():
       f=open("transcation.txt","r")
       r=f.read()
       print(r)
+      f.close()
     else:
         print("file not exist")
 
@@ -101,16 +102,9 @@ def load():
       y=f.read()
       balance=int(y)
       f.close()
-      
-      
-
-
-
-
 g=login()
 if g==True:
-   load()
-   
+   load()   
 else:
    exit()
 while True:

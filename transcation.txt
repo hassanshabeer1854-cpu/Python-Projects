@@ -1,3 +1,4 @@
 
 deposit amount=3000
 withdraw amount=1000
+deposit amount=3000
